@@ -1,0 +1,59 @@
+{% extends 'admission_base.html' %}
+{% load static %}
+    {% block content %}
+        <div class="apply_body">
+            <h1>
+                online application
+            </h1>
+            <div class="online_application">
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    <h2>
+                        application information
+                    </h2>
+                    <label for="entry_term">entry term *</label>
+                    <select name="entry_term" id="entry_term">
+                        <option value=""></option>
+                        <option value="">2023 fall</option>
+                        <option value="">2023 spring</option>
+                        <option value="">2023 winter</option>
+                    </select>
+                    <label for="campus">campus *</label>
+                    <select name="campus" id="campus">
+                        <option value=""></option>
+                        <option value="">abuja</option>
+                        <option value="">choba</option>
+                    </select>
+                    <div class="area_of_interest">
+                        <label for="interest">area of interest</label>
+                        <p>
+                            Choose an Area of Interest. This will determine which Academic Programs will show below.
+                        </p>
+                        <p>
+                            For Undergrad students - Before selecting your Area of Interest and Academic program please review mrsoft egbility page for information on admission eligibility for specific academic programs. Choosing an Area of Interest will determine which Academic Programs will show below.
+                        </p>
+                        <p>
+                            Concurrent or Visitor applicants are required to select Area of Interest as Unsure and Academic Program as Unsure Program.
+                        </p>
+                        <p>
+                            Non-Degree applicants are required to select Area of Interest as Non-Degree and Academic Program as Non-Degree Student.
+                        </p>
+                        <select name="interest" id="interest">
+                            <option value=""></option>
+                            <option value="">Science</option>
+                        </select>
+                    </div>
+                    <label for="program"> academic program*</label>
+                    <select name="program" id="">
+                        <option value=""></option>
+                        <option value="">computer Science</option>
+                    </select>
+                    
+                    <div class="button">
+                        <a href="{% url 'admission_portal' %}">back</a>
+                        <button type="submit">submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    {% endblock %}

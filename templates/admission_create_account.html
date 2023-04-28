@@ -1,0 +1,37 @@
+{% extends 'admission_base.html' %}
+{% load static %}
+    {% block content %}
+    <div class="login_body">
+        <div class="login_middle">
+            <h1>MR-SOFT Create Account</h1>
+            <form action="{% url 'admission_register' %}" method="POST">
+                {% csrf_token %}
+                {% for message in messages %}
+                <div class="login_error">
+                    <p>{{message}}</p>
+                </div>
+                {% endfor %}
+                <label for="admission_username">MR-SOFT Username</label>
+                <input type="text" name="admission_username">
+                <label for="admission_first_name"> First name</label>
+                <input type="text" name="admission_first_name" id="admission_first_name">
+                <label for="admission_last_name"> Last name</label>
+                <input type="text" name="admission_last_name" id="admission_last_name">
+                <label for="admission_email">Email</label>
+                <input type="email" name="admission_email" id="admission_email">
+                <label for="password">Password</label>
+                <input type="password" name="admission_password">
+                <label for="password">Confirm password</label>
+                <input type="password" name="admission_password2">
+                <input type="submit" value="CREATE ACCOUNT">
+            </form>
+            <div class="login_options">
+                <a href="{% url 'home' %}">
+                    return home
+                </a>
+                <a href="{% url 'admission_login' %}">
+                    log in
+                </a>
+            </div>
+        </div>
+    {% endblock %}

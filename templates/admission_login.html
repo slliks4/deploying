@@ -1,0 +1,29 @@
+{% extends 'admission_base.html' %}
+{% load static %}
+    {% block content %}
+    <div class="login_body">
+        <div class="login_middle">
+            <h1>MR-SOFT login</h1>
+            <form action="{% url 'admission_login' %}" method="POST">
+                {% csrf_token %}
+                {% for message in messages %}
+                <div class="login_error">
+                    <p>{{message}}</p>
+                </div>
+                {% endfor %}
+                <label for="id">MR-SOFT Username</label>
+                <input type="text" name="username">
+                <label for="password">Password</label>
+                <input type="password" name="password">
+                <input type="submit" value="LOG IN">
+            </form>
+            <div class="login_options">
+                <a href="{% url 'home' %}">
+                    return home
+                </a>
+                <a href="{% url 'admission_register' %}">
+                    register
+                </a>
+            </div>
+        </div>
+    {% endblock %}

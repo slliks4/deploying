@@ -1,0 +1,23 @@
+{% extends 'admission_base.html' %}
+{% load static %}
+    {% block content %}
+        <div class="admission_portal_body">
+            <h1>
+                2023 Fall (September) - SC - Master of Artificial Intelligence/St. John's/Undergraduate New Student
+            </h1>
+            <div class="application_header">
+                <a href="{% url 'online_application_review' %}">review</a>
+                <a href="" class="active">documents and supplemental items</a>
+            </div>
+            <div class="application_main_body">
+                <div class="document_items">
+                    <h2>documents and supplemental items</h2>
+                    <p>There are currently no supplemental items associated with this application. The application form must be complete and submitted with payment for any required Supplemental items to show.</p>
+                </div>
+                <div class="recommendation_request">
+                    <h2>recommmendation requests</h2>
+                    <p>For office use only.</p>
+                </div>
+            </div>
+        </div>
+    {% endblock %}

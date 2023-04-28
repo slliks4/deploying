@@ -1,0 +1,30 @@
+{% extends 'admission_base.html' %}
+{% load static %}
+    {% block content %}
+        <div class="apply_body">
+            <h1>
+                application listing
+            </h1>
+            <div class="application_listing">
+                <p>
+                    Please choose which application you wish to complete.
+                </p>
+                <br>
+                <p>
+                    Please note that credit card payments on the application are only available from 5 a.m. to 12 a.m. (Newfoundland time), Sunday through Friday. It is unavailable on Saturday.
+                </p>
+                <div class="listing">
+                    {% for course_listing in course_listings %}
+                    <a href="{% url 'online_application' %}">
+                        <h2>
+                            {{course_listing.course_name}}
+                        </h2>
+                        <p>
+                            {{course_listing.course_description}}
+                        </p>
+                    </a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    {% endblock %}

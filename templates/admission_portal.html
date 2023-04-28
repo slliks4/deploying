@@ -1,0 +1,162 @@
+{% extends 'admission_base.html' %}
+{% load static %}
+    {% block content %}
+        <div class="admission_portal_body">
+            <h1>
+                my account
+            </h1>
+            <div class="admission_portal_information">
+                <p>
+                    welcome, user! This is your place for access to information about MRSOFT accademy. Here, you can: (1) apply to MRSOFT; (2) check the status of your application; (3) update your profile; (4) Learn more about your program or area of interest.
+                </p>
+            </div>
+            <div class="admission_portal_flex">
+                <div class="admission_portal_left">
+                    <div class="admission_portal_Myapplication">
+                        <div class="Myapplication_heading">
+                            <h1>
+                                my applications
+                            </h1>
+                            <a href="{% url 'online_application' %}">
+                                create a new application
+                            </a>
+                        </div>
+                        <div class="Myapplication_body">
+                            <div class="Myapplication_detail">
+                                <h4>application</h4>
+                                <a href="{% url 'online_application_review' %}">
+                                    2023 Fall (September) - SC - Master of Science - Biology
+                                </a>
+                            </div>
+                            <div class="Myapplication_status">
+                                <h4>status</h4>
+                                <a href="">
+                                    action required
+                                </a>
+                            </div>
+                            <div class="Myapplication_action">
+                                <h4>action</h4>
+                                <a href="{% url 'online_application_review' %}">
+                                    edit
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="admission_portal_events">
+                        <div class="events_heading">
+                            <h1> events</h1>
+                            <a href="">
+                                view upcoming events
+                            </a>
+                        </div>
+                        <div class="events_body">
+                            <div class="events_detail">
+                                <p>
+                                    You are not currently registered for any events.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="admission_portal_profile">
+                        <div class="profile_heading">
+                            <h1>my profile</h1>
+                            <a href="{% url 'online_application_review' %}">
+                                update profile
+                            </a>
+                        </div>
+                        <div class="profile_first">
+                            <ul>
+                                <li>
+                                    {{user.get_full_name}}
+                                </li>
+                                <li>
+                                    <h4>
+                                        birth day
+                                    </h4>
+                                </li>
+                                <li></li>
+                            </ul>
+                        </div>
+                        <div class="profile_second">
+                            <ul>
+                                <li>
+
+                                </li>
+                                <li>
+
+                                </li>
+                                <li>
+                                    <h4>
+                                        Primary Phone
+                                    </h4>
+                                </li>
+                                <li>
+
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <h4>email address</h4>
+                                </li>
+                                <li>
+                                    {{user.email}}
+                                </li>
+                            </ul>
+                        </div>
+                        {% for personal_info in personal_infos %}
+                        <div class="profile_third">
+                            <h1>area of interest</h1>
+                            <div class="profile_third_body">
+                                <div>
+                                    <h1> entry term</h1>
+                                    <p>
+                                        2023 Fall (September)
+                                    </p>
+                                </div>
+                                <div>
+                                    <h1> academic level</h1>
+                                    <p>
+                                        graduate
+                                    </p>
+                                </div>
+                                <div>
+                                    <h1> Academic Program</h1>
+                                    <p>
+                                        SC - Master of Science - Biology	
+                                    </p>
+                                </div>
+                                <div>
+                                    <h1> Admit Type</h1>
+                                    <p>
+                                        Graduate Student	
+                                    </p>
+                                </div>
+                                <div>
+                                    <h1> Location</h1>
+                                    <p>
+                                        St. John's	
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="admission_portal_right">
+                    <div class="admission_portal_help">
+                        <h1>need help?</h1>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio voluptate laboriosam similique quidem voluptates soluta laborum, consectetur voluptatibus tempore facilis sapiente nemo dolorem deleniti reprehenderit, libero numquam magnam eius vel?
+                        </p>
+                    </div>
+                    <div class="admission_portal_spotlight">
+                        <h1>program spotlight</h1>
+                        <img src="{% static 'img/img.png' %}" alt="">
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. A nisi nesciunt, ipsa aspernatur mollitia esse cumque unde consectetur. Harum repudiandae illum fugit nihil aliquid vel soluta aliquam nisi iure nulla.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endblock %}

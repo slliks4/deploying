@@ -1,0 +1,47 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mrsoft/apply</title>
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+</head>
+<body>
+    <div class="admission_portal">
+        <header>
+            <h1>MRSOFT</h1> 
+            <ul>
+                <li>
+                    <a href="{% url 'admission_portal' %}" class="active link">my account</a>
+                </li>
+                <li class="link">
+                    <a href="{% url 'apply' %}">apply online</a>
+                </li>
+                <li class="link">
+                    <a href="">faq</a>
+                </li>
+            </ul>
+            <p class="link">
+                {% if user.is_authenticated %}
+                <a>hello {{user.first_name}} </a> <a href="{% url 'admission_logout' %}" class="admission_logout">log out</a>
+                {% endif %}
+            </p>
+        </header>
+       {% block content %}
+
+       {% endblock %}
+        <footer>
+            <h5>
+                <a href="">copyright @2023 mrsoft accademy of nigeria</a>
+            </h5>
+            <h5>
+                port-harcourt, nigeria
+            </h5>
+        </footer>
+    </div>
+    <script src="{% static 'js/index.js' %}"></script>
+</body>
+</html>

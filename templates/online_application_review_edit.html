@@ -1,0 +1,493 @@
+{% extends 'admission_base.html' %}
+{% load static %}
+    {% block content %}
+        <form action="" method="POST">
+            {% csrf_token %}
+            <div class="admission_portal_body">
+                <h1>
+                    2023 Fall (September) - SC - Master of Artificial Intelligence/St. John's/Undergraduate New Student
+                </h1>
+                <div class="application_header">
+                    <a href="" class="active">review</a>
+                    <a href="{% url 'admission_documents' %}">documents and supplemental items</a>
+                </div>
+                <div class="application_main_body">
+                <div class="application_body">
+                    <div class="application_body_heading">
+                        <a href="" class="application_heading_link active">welcome</a>
+                        <a onclick="Plans()" class="application_heading_link" href="#plans">plans</a>
+                        <a onclick="Personal()" class="application_heading_link" href="#personal">personal</a>
+                        <a onclick="Demographics()" class="application_heading_link" href="#demographics">demographics</a>
+                        <a onclick="Next_of_kin()" class="application_heading_link" href="#next_of_kin">next of kin</a>
+                        <a onclick="Academics()" class="application_heading_link" href="#academics">academics</a>
+                        <a onclick="Declaration()" class="application_heading_link" href="#declaration">declaration</a>
+                    </div>
+                    <div class="application_body_page" id="application_form">
+                        <h1>welcome</h1>
+                        <p>
+                            Welcome to the Undergraduate Application for Admission/Readmission to Memorial University
+                        </p>
+                        <p>
+                            Is this the Correct Application?
+                        </p>
+                        <p>
+                            This application is for students that are Canadian Citizens or Permanent Residents who also meet one of the following statements:
+                        </p>
+                        <ul>
+                            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem architecto amet laborum et nam perferendis soluta?</li>
+                            <li> delectus ab? Quaerat eligendi praesentium accusamus aspernatur aliquid ipsam, optio doloremque animi cumque similique?</li>
+                            <li> delectus ab? Quaerat eligendi praesentium accusamus aspernatur aliquid ipsam, optio doloremque animi cumque similique?</li>
+                        </ul>
+                        <p>
+                            If one of these categories does not apply to you, please exit and select another application from the Create an Application page.
+                        </p>
+                        <p>
+                            If you submit the incorrect application you will be notified by email and will need to resubmit the appropriate one.
+                        </p>
+                        <p>what are my next steps?</p>
+                        <ul>
+                            <li>delectus ab? Quaerat eligendi praesentium accusamus aspernatur aliquid ipsam, optio doloremque animi cumque similique</li>
+                            <li>delectus ab? Quaerat eligendi praesentium accusamus aspernatur aliquid ipsam, optio doloremque animi cumque similique</li>
+                            <li>delectus ab? Quaerat eligendi praesentium accusamus aspernatur aliquid ipsam, optio doloremque animi cumque similique</li>
+                            <li>delectus ab? Quaerat eligendi praesentium accusamus aspernatur aliquid ipsam, optio doloremque animi cumque similique</li>
+                            <li>delectus ab? Quaerat eligendi praesentium accusamus aspernatur aliquid ipsam, optio doloremque animi cumque similique</li>
+                            <li>delectus ab? Quaerat eligendi praesentium accusamus aspernatur aliquid ipsam, optio doloremque animi cumque similique</li>
+                            <li>delectus ab? Quaerat eligendi praesentium accusamus aspernatur aliquid ipsam, optio doloremque animi cumque similique</li>
+                        </ul>
+                        <p>
+                            For more information, please review the Admissions website 
+                        </p>
+                        <p>
+                            Please thoroughly review the website before starting an application.
+                        </p>
+                        <h3>
+                            i understand and agree to the above
+                        </h3>
+                        <input type="checkbox" name="checkbox" id="checkbox"> 
+                        <label for="checkbox">yes</label>
+                        <div class="button">
+                            <a href="{% url 'admission_portal' %}">back</a>
+                            <a onclick="Change(1)"href="#plans">continue</a>
+                        </div>
+                    </div>
+                    <div class="application_body_page" id="plans">
+                        <div class="online_application_plans">
+                            <p>
+                                This application is to be completed by the applicant. All information provided in this application is required to be complete and factually true.
+                            </p>
+                            <p>
+                                Please enter your information in each of the following sections. Fields with a red asterisk (*) are required and must be completed before you can submit your application. Additional questions may become required based on your answers to a previous question.
+                            </p>
+                            <div class="academic_plans" id="academics_plan">
+                                <div>
+                                    <label for="entry_term">entry term*</label>
+                                    <select name="entry_term" id="entry_term">
+                                        <option value=""></option>
+                                        <option value="">2023 fall</option>
+                                        <option value="">2023 spring</option>
+                                        <option value="">2023 winter</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="campus">campus *</label>
+                                    <select name="campus" id="campus">
+                                        <option value=""></option>
+                                        <option value="">abuja</option>
+                                        <option value="">choba</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <p>
+                                <b>Student Type</b>
+                            </p>
+                            <select name="student_type" id="student_type">
+                                <option value=""></option>
+                                <option value="">new student</option>
+                                <option value="">readmission</option>
+                                <option value="">transfer</option>
+                            </select>
+                            <p>
+                               <b>admission category *</b>
+                            </p>
+                            <p>In the drop box below please select your Admission Category based on the following definitions (Please note NL=Newfoundland and Labrador):</p>
+                            <ul>
+                                <li>delectus ab? Quaerat eligendi praesentium accusamus aspernatur aliquid ipsam, optio doloremque animi cumque similique</li>
+                                <li>delectus ab? Quaerat eligendi praesentium accusamus aspernatur aliquid ipsam, optio doloremque animi cumque similique</li>
+                                <li>delectus ab? Quaerat eligendi praesentium accusamus aspernatur aliquid ipsam, optio doloremque animi cumque similique</li>
+                                <li>delectus ab? Quaerat eligendi praesentium accusamus aspernatur aliquid ipsam, optio doloremque animi cumque similique</li>
+                                <li>delectus ab? Quaerat eligendi praesentium accusamus aspernatur aliquid ipsam, optio doloremque animi cumque similique</li>
+                                <li>delectus ab? Quaerat eligendi praesentium accusamus aspernatur aliquid ipsam, optio doloremque animi cumque similique</li>
+                                <li>delectus ab? Quaerat eligendi praesentium accusamus aspernatur aliquid ipsam, optio doloremque animi cumque similique</li>
+                            </ul>
+                            <select name="admission_category" id="admission_category">
+                                <option value=""></option>
+                                <option value="">new student</option>
+                                <option value="">readmission</option>
+                                <option value="">transfer</option>
+                                <option value="">new student</option>
+                                <option value="">readmission</option>
+                                <option value="">transfer</option>
+                                <option value="">new student</option>
+                                <option value="">readmission</option>
+                                <option value="">transfer</option>
+                            </select>
+                            <p>
+                                <b>area of interest *</b>
+                            </p>
+                            <p>
+                                Before selecting your Area of Interest and Academic program please review our website for courses
+                            </p>
+                            <p>
+                                for information on admission eligibility for specific academic programs. Choosing an Area of Interest will determine which Academic Programs will show below.
+                            </p>
+                            <p>
+                                Concurrent or Visitor applicants are required to select Area of Interest as Unsure and Academic Program as Unsure Program.
+                            </p>
+                            <select name="area_of_interest" id="area_of_interest">
+                                <option value=""></option>
+                                <option value="">new student</option>
+                                <option value="">readmission</option>
+                                <option value="">transfer</option>
+                                <option value="">new student</option>
+                                <option value="">readmission</option>
+                                <option value="">transfer</option>
+                                <option value="">new student</option>
+                                <option value="">readmission</option>
+                                <option value="">transfer</option>
+                            </select>
+                            <p>
+                                <b>academic program *</b>
+                            </p>
+                            <p>Please be sure to check program/semester intakes and application deadlines. If a program is closed you will not receive a message until after you attempt to submit the application.</p>
+                            <select name="academic_program" id="academic_program">
+                                <option value=""></option>
+                                <option value="">new student</option>
+                                <option value="">readmission</option>
+                                <option value="">transfer</option>
+                                <option value="">new student</option>
+                                <option value="">readmission</option>
+                                <option value="">transfer</option>
+                                <option value="">new student</option>
+                                <option value="">readmission</option>
+                                <option value="">transfer</option>
+                            </select>
+                            <p>
+                                <b> mrsoft id *</b>
+                            </p>
+                            <p>
+                                If you have attended or applied to a campus of Memorial University previously and received a student number (9 digits), please enter it here. This information is required to ensure your application is processed quickly.
+                            </p>
+                            <input type="text" name="Student_id" id="mrsoft_id">
+                            <div class="button">
+                                <a onclick="Change(-1)" href="#application_form">back</a>
+                                <a onclick="Change(1)" href="#personal">continue</a>
+                                <button >save</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="application_body_page" id="personal">
+                        <div class="online_application_personal">
+                            <p>
+                                This application is to be completed by the applicant. All information provided in this application is required to be complete and factually true.
+                            </p>
+                            <p>
+                                Please enter your information in each of the following sections. Fields with a red asterisk (*) are required and must be completed before you can submit your application. Additional questions may become required based on your answers to a previous question.
+                            </p>
+                            <p>
+                                Please note when providing information on your name the fields will be used in correspondence as per example: Given Name: Jie Family Name: Xiang = Dear Jie Xiang
+                            </p>
+                            <h2>name</h2>
+                            <label for="prefix">prefix</label>
+                            <br>
+                            <select name="prefix" id="prefix">
+                                <option value=""></option>
+                                <option value="">mr</option>
+                                <option value="">mrs</option>
+                                <option value="">dr</option>
+                            </select>
+                            <div class="personal_information">
+                                <div>
+                                    <label for="name">Given Name</label>
+                                    <input type="text" name="Given_name" id="">
+                                </div>
+                                <div>
+                                    <label for="name">middle name</label>
+                                    <input type="text" name="Middle_name" id="">
+                                </div>
+                                <div>
+                                    <label for="name">family name</label>
+                                    <input type="text" name="Family_name" id="">
+                                </div>
+                            </div>
+                            <div class="personal_information">
+                                <div>
+                                    <label for="name">preferred first Name</label>
+                                    <input type="text" name="Preffered_first_name" id="">
+                                </div>
+                                <div>
+                                    <label for="name">preferred family name</label>
+                                    <input type="text" name="Preffered_family_name" id="">
+                                </div>
+                            </div>
+                            <h2>permanent address</h2>
+                            <div class="permanent_address">
+                                <label for="address">address</label>
+                                <input type="text" name="Address" id="">
+                            </div>
+                            <div class="location">
+                                <div>
+                                    <label for="city">city</label>
+                                    <input type="text" name="City" id="city">
+                                </div>
+                                <div>
+                                    <label for="country">country</label>
+                                    <select name="country" id="country">
+                                        <option value=""></option>
+                                        <option value="">nigeria</option>
+                                        <option value="">canada</option>
+                                        <option value="">france</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <h2>phone and email</h2>
+                            <div class="contact_info">
+                                <div>
+                                    <label for="phone">primary phone</label>
+                                    <input type="text" name="Phone" id="phone">
+                                </div>
+                                <div>
+                                    <label for="email">email address</label>
+                                    <input type="email" name="Email" id="email">
+                                </div>
+                            </div>
+                            <h2>citizenship</h2>
+                            <div class="citizenship">
+                                <label for="citizenship">country of citizenship</label>
+                                <br>
+                                    <select name="citizenship" id="citizenship">
+                                        <option value=""></option>
+                                        <option value="">nigeria</option>
+                                        <option value="">canada</option>
+                                        <option value="">france</option>
+                                    </select>
+                            </div>
+                            <div class="button">
+                                <a onclick="Change(-1)" href="#plans">back</a>
+                                <a onclick="Change(1)" href="#demographics">continue</a>
+                                <button >save</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="application_body_page" id="demographics">
+                        <div class="online_application_demographics">
+                            <p>
+                                This application is to be completed by the applicant. All information provided in this application is required to be complete and factually true.
+                            </p>
+                            <p>
+                                Please enter your information in each of the following sections. Fields with a red asterisk (*) are required and must be completed before you can submit your application. Additional questions may become required based on your answers to a previous question.
+                            </p>
+                            <h2>additional information</h2>
+                            <div class="additional_info">
+                                <div>
+                                    <label for="gender">gender</label>
+                                    <select name="gender" id="gender">
+                                        <option value=""></option>
+                                        <option value="">male</option>
+                                        <option value="">female</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="birthday">birth day</label>
+                                    <input type="date" name="Birthday" id="birthday">
+                                </div>
+                            </div>
+                            <div class="information">      
+                                <div class="first_language">
+                                    <label for="first_language">first language</label>
+                                    <select name="First_language" id="first_language">
+                                        <option value=""></option>
+                                        <option value="">english</option>
+                                        <option value="">spanish</option>
+                                    </select>
+                                </div>
+                                <div class="residence">
+                                    <label for="residence">country of residence</label>
+                                    <select name="gender" id="gender">
+                                        <option value=""></option>
+                                        <option value="">nigeria</option>
+                                        <option value="">germany</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="button">
+                                <a onclick="Change(-1)" href="#demographics">back</a>
+                                <a onclick="Change(1)" href="#next_of_kin">continue</a>
+                                <button >save</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="application_body_page" id="next_of_kin">
+                        <div class="online_application_next_of_kin">
+                            <p>
+                                This application is to be completed by the applicant. All information provided in this application is required to be complete and factually true.
+                            </p>
+                            <p>
+                                Please enter your information in each of the following sections. Fields with a red asterisk (*) are required and must be completed before you can submit your application. Additional questions may become required based on your answers to a previous question.
+                            </p>
+                            <h2>next of kin</h2>
+                            <div class="kin_info">
+                                <div>
+                                    <label for="relationship">relationship with you</label>
+                                    <select name="relationship" id="relationship">
+                                        <option value=""></option>
+                                        <option value="">mother</option>
+                                        <option value="">father</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="prefix">prefix</label>
+                                    <select name="relationship" id="relationship">
+                                        <option value=""></option>
+                                        <option value="">mr</option>
+                                        <option value="">mrs</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="personal_information">
+                                <div>
+                                    <label for="name">Given Name</label>
+                                    <input type="text" name="Kin_given_name" id="">
+                                </div>
+                                <div>
+                                    <label for="name">middle name</label>
+                                    <input type="text" name="Kin_middle_name" id="">
+                                </div>
+                                <div>
+                                    <label for="name">family name</label>
+                                    <input type="text" name="Kin_family_name" id="">
+                                </div>
+                            </div>
+                            <h2>next of kin address</h2>
+                            <div class="permanent_address">
+                                <label for="address">address</label>
+                                <input type="text" name="Kin_address" id="">
+                            </div>
+                            <div class="location">
+                                <div>
+                                    <label for="city">city</label>
+                                    <input type="text" name="Kin_city" id="city">
+                                </div>
+                                <div>
+                                    <label for="country">country</label>
+                                    <select name="country" id="country">
+                                        <option value=""></option>
+                                        <option value="">nigeria</option>
+                                        <option value="">canada</option>
+                                        <option value="">france</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <h2>Release of Information Authorization</h2>
+                            <p>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint illum ratione molestiae aperiam autem est earum quidem animi dolorum obcaecati! Deleniti, pariatur rem temporibus molestiae officiis esse. Excepturi, laudantium quos!
+                            </p>
+                            <div class="check_box">
+                                <input type="radio" name="Kin_information_authorization" id="yes">
+                                <label for="yes">yes</label>
+                                <input type="radio" name="Kin_information_authorization" id="no">
+                                <label for="no">no</label>
+                            </div>
+                            <div class="button">
+                                <a onclick="Change(-1)" href="#demographics">back</a>
+                                <a onclick="Change(1)" href="#academics">continue</a>
+                                <button >save</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="application_body_page" id="academics">
+                        <div class="online_application_academics">
+                            <p>
+                                This application is to be completed by the applicant. All information provided in this application is required to be complete and factually true.
+                            </p>
+                            <p>
+                                Please enter your information in each of the following sections. Fields with a red asterisk (*) are required and must be completed before you can submit your application. Additional questions may become required based on your answers to a previous question.
+                            </p>
+                            <h2>High School/Secondary School Attendance</h2>
+                            <div class="high_school">
+                                <div>
+                                    <label for="school_name">school name (full or partial)</label>
+                                    <input type="text" name="School_name" id="school_name">
+                                </div>
+                                <div>
+                                    <label for="country">country</label>
+                                    <select name="country" id="country">
+                                        <option value=""></option>
+                                        <option value="">nigeria</option>
+                                        <option value="">canada</option>
+                                        <option value="">usa</option>
+                                        <option value="">nigeria</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="city">city</label>
+                                    <input type="text" name="School_city" id="city">
+                                </div>
+                            </div>
+                            <div class="button">
+                                <a onclick="Change(-1)" href="#next_of_kin">back</a>
+                                <a onclick="Change(1)" href="#declaration">continue</a>
+                                <button >save</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="application_body_page " id="declaration">
+                        <div class="online_application_declaration">
+                            <p>
+                                This application is to be completed by the applicant. All information provided in this application is required to be complete and factually true.
+                            </p>
+                            <p>
+                                Please enter your information in each of the following sections. Fields with a red asterisk (*) are required and must be completed before you can submit your application. Additional questions may become required based on your answers to a previous question.
+                            </p>
+                            <h2>declaration</h2>
+                            <p>
+                                Please affirm the following before you submit your application.
+                            </p>
+                            <p>
+                                By clicking the "Submit" button below, you will submit the application and agree to the following declaration. Please note that upon submission you will no longer be able to update this application without contacting the Registrar's Office.
+                            </p>
+                            <p>
+                                I hereby apply for enrolment at Memorial University of Newfoundland and certify that the information contained herein is complete and correct. I understand the failure to disclose information required on this application form is considered to be an academic offence. If admitted, I agree to abide by all the rules and regulations set out by the University. I make this application in acknowledgement that it is subject to all of the provisions of current and future University Calendars which govern my course of study at the University, including, without restricting the generality of the foregoing, any and all limitations and qualifications set out therein. I hereby authorize Memorial University to obtain all relevant records from any school or post-secondary institution which I have attended. When required, to share misrepresented or falsified educational credential information with other post-secondary institutions and to release to agencies with a legitimate interest any non-confidential information.
+                            </p>
+                            <p>
+                                i hereby authorize the Department of Education, Province of Newfoundland and Labrador, to release my examination results to the Office of the Registrar, MRSOFT University.
+                            </p>
+                            <div class="check_box">
+                                <input type="radio" name="Declaration_authorization" id="yes">
+                                <label for="yes">yes</label>
+                                <input type="radio" name="Declaration_authorization" id="no">
+                                <label for="no">no</label>
+                            </div>
+                            <p>
+                                The electronic signature consists simply of your name, typed by you on your keyboard. The signature is your confirmation that the application you have filled out is your own work and the information is factually true. Once you type in your name, this will count as your electronic signature.
+                            </p>
+                            <div class="signature">
+                                <div>
+                                    <label for="signature">signature</label>
+                                    <input type="text" name="Signature" id="signature">
+                                </div>
+                                <div>
+                                    <label for="signature_date">signature date</label>
+                                    <input type="date" name="Signature_date" id="">
+                                </div>
+                            </div>
+                            <div class="button">
+                                <a onclick="Change(-1)" href="#academics">back</a>
+                                <button type="submit" >submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </form>
+    {% endblock %}
