@@ -25,7 +25,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY','django-insecure-(h6se($1*6ft=h9
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['web-production-b97a.up.railway.app']
+ALLOWED_HOSTS = ['web-production-02407.up.railway.app']
 
 
 # Application definition
@@ -135,4 +135,4 @@ db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-CSRF_TRUSTED_ORIGINS = ['https://web-production-b97a.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['https://web-production-02407.up.railway.app']
